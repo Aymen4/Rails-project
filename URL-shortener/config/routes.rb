@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get '/:short_url' => 'shortoners#show'
 
   get '/shortoners/new/new' => 'shortoners#new'
-	
+  
+  delete '/shortoners/:short_url' => 'shortoners#destroy'	
   post 'shortoners' => 'shortoners#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
