@@ -12,7 +12,11 @@
   	<% if user_signed_in? %>
   	<p>Hello, <%= current_user.email %> - <%= link_to "sign_out", destroy_user_session_path, :method => 'delete' %></p>
     <br>
-    <%end%>
+    <% else %>
+  <p>Hi, welcome to url_shorter please login!</p>  
+  <%= link_to('Login', new_user_session_path)  %>  
+    <% end%>
+
     <%= yield %>
   </body>
 </html>
