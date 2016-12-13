@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/shortoners' => 'shortoners#index'
   
-  get '/shortoners/:short_url' => 'shortoners#show'
+  get '/:short_url' => 'shortoners#show'
 
   get '/shortoners/new/new' => 'shortoners#new'
 	

@@ -11,7 +11,7 @@
   <body>
   	<% if user_signed_in? %>
   	<p>Hello, <%= current_user.email %> - <%= link_to "sign_out", destroy_user_session_path, :method => 'delete' %></p>
-    <br>
+  <p>press on the link shorter your url: <%= link_to('url_shorter', shortoners_new_new_path)  %>  
     <% else %>
   <p>Hi, welcome to url_shorter please login!</p>  
   <%= link_to('Login', new_user_session_path)  %>  
